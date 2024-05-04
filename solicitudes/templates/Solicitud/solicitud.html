@@ -12,14 +12,22 @@
 
                     <table class="table table-hover">
                         <thead>
-                        <tr style="color:#0E2EB0">
-                            <th>Variable</th>
+                        <tr style="color:#0eb05c">
+                            <th>Solicitud</th>
                         </tr>
                         </thead>
                         <tbody>
 
                         <tr>
-                            <td>{{ variable.name }}</td>
+                            <td>{{ Solicitud.name }}</td>
+                            <td>{{ Solicitud.email }}</td>
+                            <td>{{ Solicitud.phone }}</td>
+                            <td>{{ Solicitud.id_number }}</td>
+                            <td>{{ Solicitud.address }}</td>
+                            <td>{{ Solicitud.city }}</td>
+                            <td>{{ Solicitud.state }}</td>
+                            <td>{{ Solicitud.zip_code }}</td>
+                            <td>{{ Solicitud.country }}</td>
                         </tr>
 
                         </tbody>
@@ -27,7 +35,7 @@
 
                     <div style="text-align:center;">
                         <button type="button" class="btn btn-primary waves-effect waves-light"
-                                onClick=" window.location.href='/variables' ">
+                                onClick=" window.location.href='/solicitudes' ">
                             Back
                         </button>
                     </div>

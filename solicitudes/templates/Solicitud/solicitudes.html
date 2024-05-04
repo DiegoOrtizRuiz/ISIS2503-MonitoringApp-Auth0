@@ -4,14 +4,12 @@
 <div class="content">
     <div class="">
         <div class="page-header-title">
-            <h4 class="page-title">Last Ten Measures</h4>
-            <!--- 
+            <h4 class="page-title">solicitudes</h4>
             <div style="text-align:right;">
                 <button type="button" class="btn btn-success waves-effect waves-light"
-                        onClick=" window.location.href='/measurementcreate' " style="text-align:center;">+
+                        onClick=" window.location.href='/solicitudcreate' " style="text-align:center;">+
                 </button>
             </div>
-            --->
         </div>
     </div>
 
@@ -23,25 +21,24 @@
 
             <div class="panel panel-default">
                 <div class="panel-body">
+
                     <table class="table table-hover">
                         <thead>
-                        <tr style="color:#0E2EB0">
-                            <th font color="red">Variable</th>
-                            <th>Value</th>
-                            <th>Unit</th>
-                            <th>Place</th>
-                            <th>Date Time</th>
+                        <tr style="color:#0eb05a">
+                            <th>Solicitud</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for measurement in measurement_list %}
+                        {% for solicitud in solicitud_list %}
                         <tr>
-                            <td>{{ measurement.variable.name }}</td>
-                            <td>{{ measurement.value }}</td>
-                            <td>{{ measurement.unit }}</td>
-                            <td>{{ measurement.place }}</td>
-                            <td>{{ measurement.dateTime }}</td>
+                            <td class="d-flex justify-content-between">
+                                {{ solicitud.name }}
+                                <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        onClick=" window.location.href='/solicitud/{{ solicitud.id }}' ">
+                                    Detail
+                                </button>
+                            </td>
                         </tr>
                         {% endfor %}
 
@@ -60,5 +57,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
